@@ -1,9 +1,10 @@
+import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View, Image, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, Alert, Button, Platform } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, Image, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, Alert, Button, Platform, Dimensions } from 'react-native';
 
 export default function App() {
-  console.log(require('./assets/icon.png'))
+  console.log(require('./app/assets/icon.png'))
   return (
     // styles.container is a plain JS object. Use {{}} for inline
     // <SafeAreaView style={styles.container}>
@@ -31,7 +32,7 @@ export default function App() {
         // Alert.prompt is iOS only
         onPress={() => 
           Alert.prompt("My Title", "My Message", text => console.log(text))
-          }
+        }
       />
     </SafeAreaView>
   );
@@ -41,7 +42,7 @@ const containerStyle = { backgroundColor: "#727272" };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1, 
     backgroundColor: '#727272',
     justifyContent: 'center',
     alignItems: 'center',
